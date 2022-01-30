@@ -19,6 +19,10 @@
     "generator-07": "node generator/07-delegation.js",
     "generator-08": "node generator/08-endless-stream-of-data.js",
     "generator-09": "node generator/09-passing-values.js",
-    "generator-10": "node generator/10-async-await-func.js"
+    "generator-10": "node generator/10-async-await-func.js",
+    "promise-01": "node promise/01-index.js",
+    "promise-02": "node promise/02-index.js",
+    "promise-03": "node promise/03-all.js",
+    "promise-04": "node promise/04-allSettled.js"
   }
 }
