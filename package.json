@@ -1,0 +1,24 @@
+{
+  "name": "lecture",
+  "version": "0.0.0",
+  "description": "lecture",
+  "dependencies": {
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "introduction-synchronous": "node ./introduction/01-synchronous.js",
+    "introduction-asynchronous": "node ./introduction/02-asynchronous.js",
+    "callback-01": "node callback/01-index.js",
+    "callback-02": "node callback/02-index.js",
+    "generator-02": "node generator/02-about.js",
+    "generator-03": "node generator/03-for-of.js",
+    "generator-04": "node generator/04-restructurization.js",
+    "generator-05": "node generator/05-return.js",
+    "generator-06": "node generator/06-throw.js",
+    "generator-07": "node generator/07-delegation.js",
+    "generator-08": "node generator/08-endless-stream-of-data.js",
+    "generator-09": "node generator/09-passing-values.js",
+    "generator-10": "node generator/10-async-await-func.js"
+  }
+}
