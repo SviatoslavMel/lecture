@@ -7,8 +7,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "introduction-synchronous": "node ./introduction/01-synchronous.js",
-    "introduction-asynchronous": "node ./introduction/02-asynchronous.js",
+    "introduction-synchronous": "node 0-introduction/01-synchronous.js",
+    "introduction-asynchronous": "node 0-introduction/02-asynchronous.js",
     "callback-01": "node 1-callback/01-index.js",
     "callback-02": "node 1-callback/02-index.js",
     "generator-02": "node 2-generator/02-about.js",
