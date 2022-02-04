@@ -24,6 +24,7 @@
     "promise-02": "node 3-promise/02-index.js",
     "promise-03": "node 3-promise/03-all.js",
     "promise-04": "node 3-promise/04-allSettled.js",
-    "async-await-01": "node 4-async-await/01-index.js"
+    "async-await-01": "node 4-async-await/01-index.js",
+    "async-await-02": "node 4-async-await/02-index.js"
   }
 }
