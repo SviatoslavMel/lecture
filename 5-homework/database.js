@@ -46,9 +46,9 @@ const createMarkaTable = () => pool.query(
 const createModelTable = () => pool.query(
     `CREATE TABLE IF NOT EXISTS model (
           id INT NOT NULL AUTO_INCREMENT,
-          marka_id VARCHAR(70) NOT NULL,
           name VARCHAR(70) NOT NULL,
           eng VARCHAR(70) NOT NULL,
+          marka_id VARCHAR(11) NOT NULL,
           PRIMARY KEY (id),
           UNIQUE INDEX id_UNIQUE (id ASC) VISIBLE)`);
 
@@ -68,13 +68,13 @@ const insertIntoMarkaTable = () => pool.query(`
 // наповнюємо базу моделями
 const insertIntoModelTable = () => pool.query(`
     INSERT INTO model VALUES 
-    (1,'A6','a6','1'),
-    (2,'A4','a4','1'),
-    (3,'Q5','q5','1'),
-    (4,'X3','x3','4'),
-    (5,'X5','x5','4'),
-    (6,'Focus','focus','5'),
-    (7,'Kuga','kuga','5')
+    (1,'A6','a6',1),
+    (2,'A4','a4',1),
+    (3,'Q5','q5',1),
+    (4,'X3','x3',4),
+    (5,'X5','x5',4),
+    (6,'Focus','focus',5),
+    (7,'Kuga','kuga',5)
 `);
 
 module.exports = {
