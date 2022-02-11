@@ -10,9 +10,9 @@ const pool = mysql2.createPool({
 });
 
 const createDatabase = () => Promise.all([
-    createAutoTable(),
-    createMarkaTable(),
-    createModelTable(),
+    createAutoTable().catch((e) => console.error('createAutoTable', e)),
+    createMarkaTable().catch((e) => console.error('createMarkaTable', e)),
+    createModelTable().catch((e) => console.error('createModelTable', e)),
 ]);
 
 const feelDatabase = () => Promise.all([
@@ -31,7 +31,7 @@ const createAutoTable = () => pool.query(
           race INT NOT NULL,
           status_id INT NOT NULL,
           PRIMARY KEY (id),
-          UNIQUE INDEX id_UNIQUE (id ASC) VISIBLE)`);
+          UNIQUE INDEX id_UNIQUE (id) VISIBLE)`);
 
 // створення таблиці для марок
 const createMarkaTable = () => pool.query(
@@ -40,7 +40,7 @@ const createMarkaTable = () => pool.query(
           name VARCHAR(70) NOT NULL,
           eng VARCHAR(70) NOT NULL,
           PRIMARY KEY (id),
-          UNIQUE INDEX id_UNIQUE (id ASC) VISIBLE)`);
+          UNIQUE INDEX id_UNIQUE (id) VISIBLE)`);
 
 // створення таблиці для моделей
 const createModelTable = () => pool.query(
@@ -50,7 +50,7 @@ const createModelTable = () => pool.query(
           eng VARCHAR(70) NOT NULL,
           marka_id VARCHAR(11) NOT NULL,
           PRIMARY KEY (id),
-          UNIQUE INDEX id_UNIQUE (id ASC) VISIBLE)`);
+          UNIQUE INDEX id_UNIQUE (id) VISIBLE)`);
 
 // наповнюємо базу оголошеннями
 const insertIntoAutoTable = () => pool.query(`
