@@ -30,8 +30,7 @@ const createAutoTable = () => pool.query(
           year INT NOT NULL,
           race INT NOT NULL,
           status_id INT NOT NULL,
-          PRIMARY KEY (id),
-          UNIQUE INDEX id_UNIQUE (id) VISIBLE)`);
+          PRIMARY KEY (id))`);
 
 // створення таблиці для марок
 const createMarkaTable = () => pool.query(
@@ -39,8 +38,7 @@ const createMarkaTable = () => pool.query(
           id INT NOT NULL AUTO_INCREMENT,
           name VARCHAR(70) NOT NULL,
           eng VARCHAR(70) NOT NULL,
-          PRIMARY KEY (id),
-          UNIQUE INDEX id_UNIQUE (id) VISIBLE)`);
+          PRIMARY KEY (id))`);
 
 // створення таблиці для моделей
 const createModelTable = () => pool.query(
@@ -49,8 +47,7 @@ const createModelTable = () => pool.query(
           name VARCHAR(70) NOT NULL,
           eng VARCHAR(70) NOT NULL,
           marka_id VARCHAR(11) NOT NULL,
-          PRIMARY KEY (id),
-          UNIQUE INDEX id_UNIQUE (id) VISIBLE)`);
+          PRIMARY KEY (id))`);
 
 // наповнюємо базу оголошеннями
 const insertIntoAutoTable = () => pool.query(`
